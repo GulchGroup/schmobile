@@ -1,0 +1,626 @@
+/****************************************************
+ * Schmoilerplate
+ * Primary style sheet
+ * Author: Chris Tallia
+ * WINTER 2015
+ ***************************************************/
+
+/****************************************************
+ * =IMPORTS
+ */
+
+@import 'bourbon/bourbon';
+
+/* reset can be found and altered at '_reset.scss' */
+@import 'reset';
+
+/* mixins can be found and altered at '_mixins.scss' */
+@import 'mixins';
+
+/****************************************************
+ * =VARIABLES
+ */
+
+$blurple: #365878;
+$green: #83C800;
+$greenText: #006633;
+
+/****************************************************
+ * =TYPOGRAPHY
+ */
+
+@font-face {
+  font-family: geosans;
+  src: url('../../fonts/geosanslight.woff');
+}
+
+@font-face {
+  font-family: texta;
+  src: url('../../fonts/texta.woff');
+}
+
+@font-face {
+  font-family: texta-light;
+  src: url('../../fonts/texta-light.woff');
+}
+
+h1{
+  font-size:48px;
+  margin-bottom: 20px;
+  line-height: 60px;
+}
+
+h2{
+  font-size:32px;
+  margin-bottom: 10px;
+  line-height: 40px;
+  color: #aaaaaa;
+}
+
+h3{
+  font-size:18px;
+  margin-bottom: 10px;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #0099ff;
+}
+
+/****************************************************
+ * =FORM ELEMENTS
+ */
+
+input{
+  &[type="text"], &[type="password"]{
+    @include inlineblock;
+    @include inner-shadow;
+    font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    border:solid 1px #cccccc;
+    padding:0 6px;
+    height:28px;
+    font-size:16px;
+    width:200px;
+    box-shadow: none;
+  }
+}
+
+textarea{
+  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  border:solid 1px #cccccc;
+  padding:6px;
+  margin:5px 0;
+  font-size:16px;
+  width:288px;
+  height:50px;
+}
+
+/****************************************************
+ * =MODULAR ELEMENTS
+ */
+
+.hide{
+  display:none;
+}
+
+.block{
+  display:block;
+  width:100%;
+}
+
+.clear{
+  clear:both;
+}
+
+.float-right{
+  float:right;
+}
+
+.float-left{
+  float:left;
+}
+
+.pad-ends{
+  padding: 20px 0;
+}
+
+.pad-top{
+  padding-top: 40px;
+}
+
+.margin-top{
+  padding-top: 20px;
+}
+
+.inline-block{
+  display:inline-block;
+  *display: inline;
+  vertical-align:top;
+  margin-right:-4px;
+  *zoom: 1;
+}
+
+a.block-link{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 98;
+  color: #666666;
+}
+
+/****************************************************
+ * =REUSABLE ELEMENTS
+ */
+
+
+/****************************************************
+ * =STRUCTURAL ELEMENTS
+ */
+
+html{
+
+}
+
+div{
+  word-wrap: break-word;
+}
+
+body{
+  font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size:12px;
+  color:#444444;
+  background: #222222;
+}
+
+div.full{
+  position: relative;
+  display: block;
+  width: 100%;
+  background: #222222;
+}
+
+div.container{
+  @include drop-shadow;
+  @include transition (width 0.5s ease-in-out);
+  width: 375pt;
+  height: 547pt;
+  position: relative;
+  background: #dddddd;
+  margin: 20pt auto;
+  overflow: hidden;
+  padding-top: 64pt;
+  padding-bottom: 60pt;
+  //@include respond(laptop){
+  //  width:1260px;
+  //}
+  //@include respond(netbook){
+  //  width:960px;
+  //}
+  //@include respond(tablet){
+  //  width:720px;
+  //}
+  //@include respond(mobile){
+  //  width: 300px;
+  //}
+  div.app-wrap{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
+}
+
+div.header{
+  @include drop-shadow;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  div.header-ios{
+    width: 375pt;
+    height: 20pt;
+    background: url("../../img/status-bar.png") #222222;
+    background-size: 100%;
+    padding-bottom: 3pt;
+  }
+  div.header-app{
+    width: 375pt;
+    line-height: 40pt;
+    font-size:14px;
+    font-weight: bold;
+    color: #444444;
+    height: 40pt;
+    background: url("../../img/local-header.png") center center no-repeat #eeeeee;
+    div.btn-header-left{
+      @include inlineblock;
+      margin-left: 10pt;
+      margin-top: 7pt;
+      div.btn-header{
+        @include inlineblock;
+        @include round-corners;
+        height: 24pt;
+        padding: 0 10pt;
+        border: solid 1pt #cccccc;
+        line-height: 24pt;
+        color: #666666;
+        cursor: pointer;
+        a{
+          color: #999999;
+        }
+        &.back{
+          padding-left: 20pt;
+          background: url("../../img/icon-back-24.png") no-repeat 5pt center;
+          background-size: 12pt 12pt;
+        }
+      }
+    }
+  }
+}
+
+div.page-title{
+  display: block;
+  height: 30pt;
+  line-height: 30pt;
+  border-bottom: solid 1px #cccccc;
+  margin-bottom: 10pt;
+  margin-top: 5pt;
+  margin-left: 15pt;
+  margin-right: 15pt;
+  font-size: 10pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+div.car-cell{
+  @include round-corners;
+  @include drop-shadow;
+  display: block;
+  width: 355pt;
+  margin: 10pt;
+  background: #ffffff;
+  height: 150pt;
+  overflow: hidden;
+  position: relative;
+  div.car-img{
+    @include inlineblock;
+    width: 150pt;
+    height: 150pt;
+    background: #444444;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  div.car-details{
+    @include inlineblock;
+    width: 175pt;
+    height: 120pt;
+    padding: 15pt;
+    font-size: 12pt;
+    position: relative;
+    label{
+      display: block;
+      font-size: 9pt;
+      color: #aaaaaa;
+      font-style: italic;
+      margin-bottom: 3pt;
+    }
+    div.detail-cell{
+      margin-bottom: 3pt;
+    }
+    div.btn-request-car{
+      @include round-corners;
+      position: absolute;
+      bottom: 15pt;
+      width: 173pt;
+      height: 30pt;
+      line-height: 30pt;
+      text-align: center;
+      background: #eeeeee;
+      border: solid 1pt #dddddd;
+      color: #444444;
+      font-size: 8pt;
+      text-transform: uppercase;
+      a{
+        color: #444444;
+      }
+    }
+  }
+  div.dialog-status{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    div.dialog-cell{
+      @include round-corners;
+      margin: 20pt;
+      padding: 10pt;
+      border: solid 1pt #ffffff;
+      height: 90pt;
+      h2{
+        text-align: center;
+        font-size: 18pt;
+        color: $greenText;
+        margin-bottom: 3pt;
+      }
+      div.sub-text{
+        display: block;
+        text-align: center;
+        font-size: 12pt;
+        color: $greenText;
+        font-style: italic;
+      }
+      div.primary-text{
+        display: block;
+        text-align: center;
+        font-size: 24pt;
+        color: $greenText;
+        font-style: italic;
+        margin-top: 10pt;
+      }
+    }
+    &.requested{
+      background: rgba(131, 200, 0, 0.9);
+    }
+    &.out{
+      background: rgba(0, 0, 0, 0.7);
+      color: #cccccc;
+      div.dialog-cell{
+        h2{
+          color: #cccccc;
+        }
+        div.sub-text{
+          color: #cccccc;
+        }
+        div.primary-text{
+          color: #cccccc;
+        }
+      }
+    }
+  }
+}
+
+div.car-detail-full{
+  @include drop-shadow;
+  width: 375pt;
+  margin: 0;
+  overflow: hidden;
+  background: #cccccc;
+  img.primary-img{
+    width: 375pt;
+    margin: 0;
+    border-top: solid 1px #aaaaaa;
+    border-bottom: solid 1px #aaaaaa;
+  }
+  div.details-full-wrap{
+    display: block;
+    padding: 20pt;
+    border-bottom: solid 1px #aaaaaa;
+    label{
+      display: block;
+      font-size: 9pt;
+      color: #999999;
+      font-style: italic;
+      margin-bottom: 3pt;
+    }
+    div.detail-cell{
+      margin-bottom: 10pt;
+      font-size: 14pt;
+    }
+  }
+}
+
+div.btn-third-wrap{
+  width: 345pt;
+  margin: 0 15pt;
+  padding: 0;
+  div.btn-third{
+    @include inlineblock;
+    @include round-corners;
+    @include drop-shadow;
+    background: $blurple;
+    padding: 0;
+    width: 105pt;
+    height: 105pt;
+    margin: 0pt 2pt 0pt 5pt;
+    line-height: 100pt;
+    text-align: center;
+    font-size: 14pt;
+    color: #ffffff;
+    &.empty-border{
+      background: transparent;
+      height: 103pt;
+      width: 103pt;
+      border: solid 2pt #999999;
+      color: #999999;
+    }
+  }
+  div.btn-two-third{
+    @include inlineblock;
+    @include round-corners;
+    @include drop-shadow;
+    position: relative;
+    background: #cccccc;
+    width: 220pt;
+    height: 55pt;
+    padding-top: 50pt;
+    margin: 0pt 2pt 0pt 5pt;
+    line-height: normal;
+    text-align: center;
+    font-size: 14pt;
+    color: #666666;
+    div.btn-details{
+      position: absolute;
+      width: 220pt;
+      top: 30pt;
+      line-height: normal;
+      text-align: center;
+      font-weight: normal;
+      font-size: 11pt;
+      font-style: italic;
+      opacity: 0.5;
+    }
+  }
+  div.btn-three-third{
+    @include inlineblock;
+    @include round-corners;
+    position: relative;
+    background: #dddddd;
+    width: 335pt;
+    height: 40pt;
+    margin: 0pt 2pt 0pt 5pt;
+    line-height: 40pt;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14pt;
+    border: solid 1pt #aaaaaa;
+    color: #666666;
+    div.btn-details{
+      position: absolute;
+      width: 220pt;
+      top: 30pt;
+      line-height: normal;
+      text-align: center;
+      font-weight: normal;
+      font-size: 11pt;
+      font-style: italic;
+      opacity: 0.5;
+    }
+  }
+  div.page-title{
+    margin: 5pt 0 10pt 0;
+    padding-bottom: 0pt;
+  }
+}
+
+div.dialog-requested{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background: rgba(131, 200, 0, 0.9);
+  div.dialog-cell{
+    @include round-corners;
+    margin: 60pt 20pt 20pt 20pt;
+    padding: 20pt;
+    border: solid 1pt $greenText;
+    h2{
+      text-align: center;
+      font-size: 24pt;
+      color: $greenText;
+    }
+    div.sub-text{
+      display: block;
+      text-align: center;
+      font-size: 12pt;
+      color: $greenText;
+      font-style: italic;
+    }
+    div.primary-text{
+      display: block;
+      text-align: center;
+      font-size: 24pt;
+      color: $greenText;
+      font-style: italic;
+      margin-top: 10pt;
+    }
+  }
+}
+
+div.gp-date-wrap{
+  display: block;
+  margin: 20pt;
+  text-align: center;
+  select{
+    font-size: 18pt;
+    width: 49%;
+  }
+}
+
+div.gp-details-wrap{
+  @include round-corners;
+  display: block;
+  margin: 20pt;
+  padding: 10pt;
+  border: solid 1px #cccccc;
+  font-size: 14pt;
+  background: #ffffff;
+  div.detail-title{
+    display: block;
+    padding: 10pt;
+    background: #444444;
+    font-size: 12pt;
+    color: #dddddd;
+  }
+  div.detail-cell{
+    display: block;
+    padding: 10pt;
+    border-bottom: dotted 1px #dddddd;
+    line-height: 22pt;
+    div.data-label{
+      color: #999999;
+    }
+    div.data-data{
+      font-weight: bold;
+      font-size: 18pt;
+    }
+  }
+}
+
+div.cell-1-2{
+  @include inline-block;
+  width: 49%;
+}
+
+div.btn-confirm-wrap{
+  width: 335pt;
+  margin: 20pt 20pt 0 20pt;
+  height: 105pt;
+  background: rgba(0, 0, 0, 0.5);
+  div.btn-confirm{
+
+  }
+}
+
+div.footer{
+  position: absolute;
+  bottom: 0pt;
+  height: 60pt;
+  width: 375pt;
+  z-index: 999;
+  @include linear-gradient(to top, #cccccc, #eeeeee);
+  border-top: 1pt solid #cccccc;
+  div.nav-cell{
+    @include inlineblock;
+    width: 124pt;
+    height: 25pt;
+    padding-top: 35pt;
+    color: #666666;
+    text-align: center;
+    font-size: 12pt;
+    border-right: solid 1pt #aaaaaa;
+    opacity: 0.5;
+    &.active{
+      opacity: 1.0;
+    }
+    &:last-of-type{
+      width: 125pt;
+      border: none;
+    }
+    &.mycars{
+      background: url('../../img/icon-nav-cars.png') top center no-repeat;
+      background-size: 35pt;
+    }
+    &.guestparks{
+      background: url('../../img/icon-guest-parks.png') top center no-repeat;
+      background-size: 35pt;
+    }
+    &.settings{
+      background: url('../../img/icon-settings.png') top center no-repeat;
+      background-size: 35pt;
+    }
+  }
+}
+
+
