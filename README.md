@@ -4,7 +4,7 @@
 
 Schmobile boilerplate is meant to be a starting point from which frontend developers can quickly get up and running.  It's meant to serve as a starting point for html-based app dev tools like Cordova and React.
 
-If you see anything you think could be improved... just submit a PR.  
+If you see anything you think could be improved... just submit a PR.
 
 ### Installation
 ```
