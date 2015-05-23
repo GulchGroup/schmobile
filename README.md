@@ -2,7 +2,9 @@
 # Schmobile
 ## A full front end ios html/css dev environment in 2 commands... 3 if you count the clone
 
-Schmobile boilerplate is meant to be a starting point from which frontend developers can quickly get up and running.
+Schmobile boilerplate is meant to be a starting point from which frontend developers can quickly get up and running.  It's meant to serve as a starting point for html-based app dev tools like Cordova and React.
+
+If you see anything you think could be improved... just submit a PR.  
 
 ### Installation
 ```
