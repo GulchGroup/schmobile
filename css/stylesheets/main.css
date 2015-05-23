@@ -285,128 +285,6 @@ div.page-title {
   text-transform: uppercase;
   color: #999999; }
 
-div.car-cell {
-  border-radius: 4px;
-  box-shadow: 0 2px 2px 0 #cccccc;
-  display: block;
-  width: 355pt;
-  margin: 10pt;
-  background: #ffffff;
-  height: 150pt;
-  overflow: hidden;
-  position: relative; }
-  div.car-cell div.car-img {
-    display: inline-block;
-    *display: inline;
-    vertical-align: top;
-    margin-right: -4px;
-    *zoom: 1;
-    width: 150pt;
-    height: 150pt;
-    background: #444444; }
-    div.car-cell div.car-img img {
-      height: 100%;
-      width: 100%; }
-  div.car-cell div.car-details {
-    display: inline-block;
-    *display: inline;
-    vertical-align: top;
-    margin-right: -4px;
-    *zoom: 1;
-    width: 175pt;
-    height: 120pt;
-    padding: 15pt;
-    font-size: 12pt;
-    position: relative; }
-    div.car-cell div.car-details label {
-      display: block;
-      font-size: 9pt;
-      color: #aaaaaa;
-      font-style: italic;
-      margin-bottom: 3pt; }
-    div.car-cell div.car-details div.detail-cell {
-      margin-bottom: 3pt; }
-    div.car-cell div.car-details div.btn-request-car {
-      border-radius: 4px;
-      position: absolute;
-      bottom: 15pt;
-      width: 173pt;
-      height: 30pt;
-      line-height: 30pt;
-      text-align: center;
-      background: #eeeeee;
-      border: solid 1pt #dddddd;
-      color: #444444;
-      font-size: 8pt;
-      text-transform: uppercase; }
-      div.car-cell div.car-details div.btn-request-car a {
-        color: #444444; }
-  div.car-cell div.dialog-status {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 99; }
-    div.car-cell div.dialog-status div.dialog-cell {
-      border-radius: 4px;
-      margin: 20pt;
-      padding: 10pt;
-      border: solid 1pt #ffffff;
-      height: 90pt; }
-      div.car-cell div.dialog-status div.dialog-cell h2 {
-        text-align: center;
-        font-size: 18pt;
-        color: #006633;
-        margin-bottom: 3pt; }
-      div.car-cell div.dialog-status div.dialog-cell div.sub-text {
-        display: block;
-        text-align: center;
-        font-size: 12pt;
-        color: #006633;
-        font-style: italic; }
-      div.car-cell div.dialog-status div.dialog-cell div.primary-text {
-        display: block;
-        text-align: center;
-        font-size: 24pt;
-        color: #006633;
-        font-style: italic;
-        margin-top: 10pt; }
-    div.car-cell div.dialog-status.requested {
-      background: rgba(131, 200, 0, 0.9); }
-    div.car-cell div.dialog-status.out {
-      background: rgba(0, 0, 0, 0.7);
-      color: #cccccc; }
-      div.car-cell div.dialog-status.out div.dialog-cell h2 {
-        color: #cccccc; }
-      div.car-cell div.dialog-status.out div.dialog-cell div.sub-text {
-        color: #cccccc; }
-      div.car-cell div.dialog-status.out div.dialog-cell div.primary-text {
-        color: #cccccc; }
-
-div.car-detail-full {
-  box-shadow: 0 2px 2px 0 #cccccc;
-  width: 375pt;
-  margin: 0;
-  overflow: hidden;
-  background: #cccccc; }
-  div.car-detail-full img.primary-img {
-    width: 375pt;
-    margin: 0;
-    border-top: solid 1px #aaaaaa;
-    border-bottom: solid 1px #aaaaaa; }
-  div.car-detail-full div.details-full-wrap {
-    display: block;
-    padding: 20pt;
-    border-bottom: solid 1px #aaaaaa; }
-    div.car-detail-full div.details-full-wrap label {
-      display: block;
-      font-size: 9pt;
-      color: #999999;
-      font-style: italic;
-      margin-bottom: 3pt; }
-    div.car-detail-full div.details-full-wrap div.detail-cell {
-      margin-bottom: 10pt;
-      font-size: 14pt; }
-
 div.btn-third-wrap {
   width: 345pt;
   margin: 0 15pt;
@@ -494,78 +372,6 @@ div.btn-third-wrap {
     margin: 5pt 0 10pt 0;
     padding-bottom: 0pt; }
 
-div.dialog-requested {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-  background: rgba(131, 200, 0, 0.9); }
-  div.dialog-requested div.dialog-cell {
-    border-radius: 4px;
-    margin: 60pt 20pt 20pt 20pt;
-    padding: 20pt;
-    border: solid 1pt #006633; }
-    div.dialog-requested div.dialog-cell h2 {
-      text-align: center;
-      font-size: 24pt;
-      color: #006633; }
-    div.dialog-requested div.dialog-cell div.sub-text {
-      display: block;
-      text-align: center;
-      font-size: 12pt;
-      color: #006633;
-      font-style: italic; }
-    div.dialog-requested div.dialog-cell div.primary-text {
-      display: block;
-      text-align: center;
-      font-size: 24pt;
-      color: #006633;
-      font-style: italic;
-      margin-top: 10pt; }
-
-div.gp-date-wrap {
-  display: block;
-  margin: 20pt;
-  text-align: center; }
-  div.gp-date-wrap select {
-    font-size: 18pt;
-    width: 49%; }
-
-div.gp-details-wrap {
-  border-radius: 4px;
-  display: block;
-  margin: 20pt;
-  padding: 10pt;
-  border: solid 1px #cccccc;
-  font-size: 14pt;
-  background: #ffffff; }
-  div.gp-details-wrap div.detail-title {
-    display: block;
-    padding: 10pt;
-    background: #444444;
-    font-size: 12pt;
-    color: #dddddd; }
-  div.gp-details-wrap div.detail-cell {
-    display: block;
-    padding: 10pt;
-    border-bottom: dotted 1px #dddddd;
-    line-height: 22pt; }
-    div.gp-details-wrap div.detail-cell div.data-label {
-      color: #999999; }
-    div.gp-details-wrap div.detail-cell div.data-data {
-      font-weight: bold;
-      font-size: 18pt; }
-
-div.cell-1-2 {
-  display: inline-block;
-  width: 49%; }
-
-div.btn-confirm-wrap {
-  width: 335pt;
-  margin: 20pt 20pt 0 20pt;
-  height: 105pt;
-  background: rgba(0, 0, 0, 0.5); }
-
 div.footer {
   position: absolute;
   bottom: 0pt;
@@ -582,7 +388,6 @@ div.footer {
     vertical-align: top;
     margin-right: -4px;
     *zoom: 1;
-    width: 124pt;
     height: 25pt;
     padding-top: 35pt;
     color: #666666;
@@ -590,6 +395,16 @@ div.footer {
     font-size: 12pt;
     border-right: solid 1pt #aaaaaa;
     opacity: 0.5; }
+    div.footer div.nav-cell.nc-1-3 {
+      width: 124pt; }
+      div.footer div.nav-cell.nc-1-3:last-of-type {
+        width: 125pt;
+        border: none; }
+    div.footer div.nav-cell.nc-1-4 {
+      width: 93pt; }
+      div.footer div.nav-cell.nc-1-4:last-of-type {
+        width: 94pt;
+        border: none; }
     div.footer div.nav-cell.active {
       opacity: 1.0; }
     div.footer div.nav-cell:last-of-type {
@@ -600,6 +415,9 @@ div.footer {
       background-size: 35pt; }
     div.footer div.nav-cell.guestparks {
       background: url('../../img/icon-guest-parks.png') top center no-repeat;
+      background-size: 35pt; }
+    div.footer div.nav-cell.search {
+      background: url('../../img/icon-nav-search.png') top center no-repeat;
       background-size: 35pt; }
     div.footer div.nav-cell.settings {
       background: url('../../img/icon-settings.png') top center no-repeat;

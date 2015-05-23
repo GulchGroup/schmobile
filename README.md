@@ -1,12 +1,12 @@
 
-# Schmoilerplate
-## A full front end dev environment in 2 commands... 3 if you count the clone
+# Schmobile
+## A full front end ios html/css dev environment in 2 commands... 3 if you count the clone
 
-Schmoilerplate boilerplate is meant to be a starting point from which frontend developers can quickly get up and running.
+Schmobile boilerplate is meant to be a starting point from which frontend developers can quickly get up and running.
 
 ### Installation
 ```
-$ git clone git@github.com:GulchGroup/schmoilerplate.git
+$ git clone git@github.com:GulchGroup/schmobile.git
 ```
 or download the zip, then at the command line within the root directory:
 ```
